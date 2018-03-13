@@ -2,10 +2,10 @@
 
 // Database instellingen
 define('DB_TYPE', 'mysql');		// Wat voor type database gebruik je?
-define('DB_HOST', '127.0.0.1'); // Wat is het IP adres van de server (127.0.0.1 is de lokale machine)
+define('DB_HOST', '127.0.0.1:8000'); // Wat is het IP adres van de server (127.0.0.1 is de lokale machine)
 define('DB_NAME', 'calendar'); // Wat is de database naam
 define('DB_USER', 'root'); 		// Wat is de database gebruiker
-//define('DB_PASS', 'password');			// Wat is het database wachtwoord
+define('DB_PASS', '');			// Wat is het database wachtwoord
 define('DB_CHARSET', 'utf8'); 	// Welke karakterset wordt gebruikt
 
 define('URL_PUBLIC_FOLDER', 'public');	// De public folder is de folder waar alle bestanden in staan die via de adresbalk direct aangevraagd kunnen worden, denk aan CSS, JS, afbeeldingen etc...
