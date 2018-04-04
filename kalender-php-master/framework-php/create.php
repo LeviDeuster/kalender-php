@@ -6,7 +6,7 @@
 
     $conn = new mysqli($servername, $username);
 
-    $sql = mysqli_select_db($conn, $dbname) or die('Could not select database');
+    $conn->select_db($dbname)  or die('Could not select database');
 
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $person = ($_GET["person"]);
@@ -33,16 +33,9 @@
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 
-    $sql ="SELECT (person, day, month, year) FROM birthdays";
+    $conn->close();
+?>
 
-$result = $conn->query($sql);
-echo $result;
-
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        echo " " . $row['person'] . " " . $row['day'] . " " . $row['month'] . " " . $row['year'] . "<br>";
-    }
-}
-
-
-$conn->close();
+    <html>
+        <a href="http://localhost:63342/php%20dordt/kalender-php-master/index.php">Back</a>
+    </html>
